@@ -2,7 +2,7 @@ import React from "react";
 
 const Loader = () => {
   return (
-    <>
+    <div className="flex flex-col h-full justify-center items-center mx-auto">
       <div className="flex items-center justify-center mt-8">
         <span className="text-gray-600">No record found</span>
       </div>
@@ -29,7 +29,7 @@ const Loader = () => {
         </svg>
         <span className="text-gray-600">Loading...</span>
       </div>
-    </>
+    </div>
   );
 };
 

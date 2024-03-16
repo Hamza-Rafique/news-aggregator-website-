@@ -5,7 +5,7 @@ import Filters from "./Filters";
 import Header from "./Header";
 import Loader from "./Loader";
 import RelatedArticles from "./RelatedArticles";
-
+import Sidebar from "./Sidebar";
 export {
   ArticleCard,
   ArticleList,
@@ -14,4 +14,5 @@ export {
   Header,
   Filters,
   RelatedArticles,
+  Sidebar,
 };
