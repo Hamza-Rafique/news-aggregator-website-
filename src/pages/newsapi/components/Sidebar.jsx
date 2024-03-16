@@ -1,5 +1,6 @@
 import React from "react";
-import { logo } from "../assets";
+import { logo } from "../../../assets";
+import { Link } from "react-router-dom";
 
 const Sidebar = ({ isOpen, setIsOpen }) => {
   const toggleSidebar = () => {
@@ -55,13 +56,21 @@ const Sidebar = ({ isOpen, setIsOpen }) => {
       </div>
       <div className="px-6">
         <p className="text-sm">Welcome to News Aggregator</p>
-        <ul className="mt-4">
-          <li className="py-2">Open News</li>
-          <li className="py-2">News Cred</li>
-          <li className="py-2">The Guardian</li>
-          <li className="py-2">BBC News</li>
-          <li className="py-2">NewsAPI.org</li>
-        </ul>
+        <li className="py-2">
+            <Link to="/">Open News</Link>
+          </li>
+          <li className="py-2">
+            <Link to="/news-cred">News Cred</Link>
+          </li>
+          <li className="py-2">
+            <Link to="/guardian">The Guardian</Link>
+          </li>
+          <li className="py-2">
+            <Link to="/bbc-news">BBC News</Link>
+          </li>
+          <li className="py-2">
+            <Link to="/newsapi">NewsAPI.org</Link>
+          </li>
       </div>
     </div>
   );

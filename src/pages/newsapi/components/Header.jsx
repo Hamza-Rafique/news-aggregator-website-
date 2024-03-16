@@ -3,7 +3,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
   faSearch,
 } from "@fortawesome/free-solid-svg-icons";
-import { logo } from "../assets";
+import { logo } from "../../../assets";
 import Filters from "./Filters";
 
 const Header = ({

@@ -1,11 +1,33 @@
 import React from "react";
-import NewsAPIPage from "./pages/newsapi";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { Suspense, lazy } from "react";
+import { Loader } from "./pages/newsapi/components";
+
+const NewsAPIPage = lazy(() => import("./pages/newsapi"));
+const GuardianPage = lazy(() => import("./pages/guardianapi"));
 
 const App = () => {
   return (
-    <>
-      <NewsAPIPage />
-    </>
+    <BrowserRouter>
+      <Routes>
+        <Route
+          path="/"
+          element={
+            <Suspense fallback={<Loader />}>
+              <NewsAPIPage />
+            </Suspense>
+          }
+        />
+        <Route
+          path="/guardian"
+          element={
+            <Suspense fallback={<Loader />}>
+              <GuardianPage />
+            </Suspense>
+          }
+        />
+      </Routes>
+    </BrowserRouter>
   );
 };
 
