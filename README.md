@@ -1,70 +1,53 @@
-# Getting Started with Create React App
+# Frontend Take-Home Challenge
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Welcome to the take-home challenge for the Frontend web developer position. We are excited to see your skills and experience in action. The challenge is to create the user interface for a news aggregator website that pulls articles from various sources and displays them in a clean, easy-to-read format.
 
-## Available Scripts
+## Requirements
 
-In the project directory, you can run:
+1. **Article search and filtering:** Users should be able to search for articles by keyword and filter the results by date, category, and source.
+2. **Personalized news feed:** Users should be able to customize their news feed by selecting their preferred sources, categories, and authors.
+3. **Mobile-responsive design:** The website should be optimized for viewing on mobile devices.
 
-### `npm start`
+## Data sources that can be used (choose at least 3)
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+1. **NewsAPI:** This is a comprehensive API that allows developers to access articles from more than 70,000 news sources, including major newspapers, magazines, and blogs. The API provides access to articles in various languages and categories, and it supports search and filtering.
+2. **OpenNews:** This API provides access to a wide range of news content from various sources, including newspapers, magazines, and blogs. It allows developers to retrieve articles based on keywords, categories, and sources.
+3. **NewsCred:** The NewsCred API provides access to a wide range of news content from various sources, including newspapers, magazines, and blogs. The API allows developers to retrieve articles based on keywords, categories, and sources, as well as to search for articles by author, publication, and topic.
+4. **The Guardian:** This API allows developers to access articles from The Guardian newspaper, one of the most respected news sources in the world. The API provides access to articles in various categories and supports search and filtering.
+5. **New York Times:** This API allows developers to access articles from The New York Times, one of the most respected news sources in the world. The API provides access to articles in various categories and supports search and filtering.
+6. **BBC News:** This API allows developers to access news from BBC News, one of the most trusted news sources in the world. It provides access to articles in various categories and supports search and filtering.
+7. **NewsAPI.org:** This API provides access to news articles from thousands of sources, including news publications, blogs, and magazines. It allows developers to retrieve articles based on keywords, categories, and sources.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## Challenge Guidelines
 
-### `npm test`
+1. The output expected from this challenge is a front-end project using React.js.
+2. You are free to choose at least three data sources from the provided list to fetch articles for your news aggregator.
+3. Ensure that the Frontend application can be containerized using Docker and provide clear documentation on how to run the project within a Docker container.
+4. Incorporate best practices of software development such as DRY (Don't Repeat Yourself), KISS (Keep It Simple, Stupid), and SOLID (Single responsibility, Open-closed, Liskov substitution, Interface segregation, Dependency inversion) into your code.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## Getting Started
 
-### `npm run build`
+To get started with the project, follow these steps:
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+1. Clone the repository: `git clone <repository-url>`
+2. Navigate to the project directory: `cd <project-directory>`
+3. Install dependencies: `npm install`
+4. Start the development server: `npm start`
+5. Access the application in your browser at `http://localhost:3000`
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+## Docker Setup
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+To run the project within a Docker container, follow these steps:
 
-### `npm run eject`
+1. Ensure Docker is installed on your system.
+2. Build the Docker image: `docker build -t news-aggregator .`
+3. Run the Docker container: `docker run -d -p 3000:3000 news-aggregator`
+4. Access the application in your browser at `http://localhost:3000`
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+## Author
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+[Hamza Rafique]
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+## License
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+This project is licensed under the [MIT License](LICENSE).
