@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import { ArticleList, Header, RelatedArticles, Loader } from "../../components";
+import { ArticleList, Header, RelatedArticles, Loader, Sidebar } from "../../components";
 import { fetchArticles } from "../../api";
 
 function NewsAPIPage() {
@@ -10,6 +10,7 @@ function NewsAPIPage() {
   const [category, setCategory] = useState("");
   const [language, setLanguage] = useState("");
   const [country, setCountry] = useState("");
+  const [isSidebarOpen, setIsSidebarOpen] = useState(false);
 
   useEffect(() => {
     fetchData();
@@ -52,6 +53,10 @@ function NewsAPIPage() {
 
   const relatedArticlesData = articles.slice(0, 3);
 
+  const toggleSidebar = () => {
+    setIsSidebarOpen(!isSidebarOpen);
+  };
+
   return (
     <div className="bg-slate-200 bg-background bg-cover h-full">
       <Header
@@ -65,6 +70,7 @@ function NewsAPIPage() {
         onLanguageChange={handleLanguageChange}
         onCountryChange={handleCountryChange}
       />
+      <Sidebar isOpen={isSidebarOpen} setIsOpen={setIsSidebarOpen} />
       <main className="container mx-auto mt-8">
         <div className="flex sm:flex-col md:flex-row">
           {articles.length ? (
@@ -77,6 +83,20 @@ function NewsAPIPage() {
           )}
         </div>
       </main>
+      <button
+        onClick={toggleSidebar}
+        className={`fixed bottom-4 left-3 h-12 w-12 rounded-full bg-blue-500 text-white flex items-center justify-center transition-all duration-300 ease-in-out transform ${isSidebarOpen ? 'translate-x-0' : 'translate-x-full'}`}
+      >
+        {isSidebarOpen ? (
+          <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M6 18L18 6M6 6l12 12" />
+          </svg>
+        ) : (
+            <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M4 6h16M4 12h16m-7 6h7" />
+          </svg>
+        )}
+      </button>
     </div>
   );
 }
