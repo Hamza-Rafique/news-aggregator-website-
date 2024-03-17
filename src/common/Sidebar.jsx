@@ -1,5 +1,5 @@
 import React from "react";
-import { logo } from "../../../assets";
+import { logo } from "../assets";
 import { Link } from "react-router-dom";
 
 const Sidebar = ({ isOpen, setIsOpen }) => {
@@ -56,21 +56,25 @@ const Sidebar = ({ isOpen, setIsOpen }) => {
       </div>
       <div className="px-6">
         <p className="text-sm">Welcome to News Aggregator</p>
-        <li className="py-2">
-            <Link to="/">Open News</Link>
+        <ul>
+          <li className="py-2">
+            <Link className="" to="/">
+              Open News
+            </Link>
           </li>
           <li className="py-2">
-            <Link to="/news-cred">News Cred</Link>
+            <Link to="/guardian">News Cred</Link>
           </li>
           <li className="py-2">
             <Link to="/guardian">The Guardian</Link>
           </li>
           <li className="py-2">
-            <Link to="/bbc-news">BBC News</Link>
+            <Link to="/">BBC News</Link>
           </li>
           <li className="py-2">
-            <Link to="/newsapi">NewsAPI.org</Link>
+            <Link to="/guardian">NewsAPI.org</Link>
           </li>
+        </ul>
       </div>
     </div>
   );

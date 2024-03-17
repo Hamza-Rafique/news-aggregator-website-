@@ -7,7 +7,7 @@ const SearchBar = ({ searchTerm, onSearchChange }) => {
       placeholder="Search articles..."
       value={searchTerm}
       onChange={onSearchChange}
-      className="px-4 py-2 rounded-lg border border-gray-300 focus:outline-none focus:ring focus:border-blue-500"
+      className="px-4 py-2 rounded-lg border text-gray-500 border-gray-300 focus:outline-none focus:ring focus:border-blue-500"
     />
   );
 };

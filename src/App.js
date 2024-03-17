@@ -1,7 +1,7 @@
 import React from "react";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import { Suspense, lazy } from "react";
-import { Loader } from "./pages/newsapi/components";
+import { Loader } from "./common";
 
 const NewsAPIPage = lazy(() => import("./pages/newsapi"));
 const GuardianPage = lazy(() => import("./pages/guardianapi"));
