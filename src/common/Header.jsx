@@ -23,7 +23,7 @@ const Header = ({
 }) => {
   console.log(sourceId);
   return (
-    <header className="bg-gray-800 text-white py-4">
+    <header className="bg-[#005689] text-white py-4">
       <div className="container mx-auto flex sm:flex-col md:flex-row sm:gap-3 justify-between items-center">
         <div className="flex items-center">
           <img src={logo} alt="Logo" className="h-8 w-auto mr-4" />

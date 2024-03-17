@@ -9,7 +9,7 @@ const Sidebar = ({ isOpen, setIsOpen }) => {
 
   return (
     <div
-      className={`fixed inset-y-0 left-0 w-64 bg-gray-800 text-white transition-all duration-300 ease-in-out ${
+      className={`fixed inset-y-0 left-0 w-64 bg-[#005689] text-white transition-all duration-300 ease-in-out ${
         isOpen ? "translate-x-0" : "-translate-x-full"
       }`}
     >
