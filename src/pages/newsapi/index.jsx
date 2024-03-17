@@ -1,13 +1,7 @@
 import React, { useState, useEffect } from "react";
-import {
-  ArticleList,
-  Header,
-  Loader,
-  RelatedArticles,
-} from "./components";
+import { ArticleList, RelatedArticles } from "./components";
 import { fetchNewsArticles } from "../../api";
-import ToggleSidebar from "../../common/ToggleSidebar";
-import Sidebar from "./components/Sidebar";
+import { Header, Loader, Sidebar, ToggleSidebar } from "../../common";
 
 function NewsAPIPage() {
   const [articles, setArticles] = useState([]);
@@ -20,7 +14,7 @@ function NewsAPIPage() {
   const [isSidebarOpen, setIsSidebarOpen] = useState(false);
 
   useEffect(() => {
-    // fetchData();
+    fetchData();
   }, [searchTerm, category, language, country]);
 
   const fetchData = async () => {
